@@ -49,6 +49,8 @@ html[data-theme="dark"] .lp{--bg:#0e0e0e;--surface:#181818;--surface-2:#232323;-
 .case-card{transition:transform .3s ease,box-shadow .3s ease}
 .case-card:hover,.case-card:focus-visible{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
 .case-mock{transition:transform .4s ease}
+.next-arrow{display:inline-block;transition:transform .2s ease}
+.case-card:hover .next-arrow{transform:translateX(4px)}
 .case-card:hover .case-mock,.case-card:focus-visible .case-mock{transform:scale(1.04)}
 .g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
 .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
@@ -86,8 +88,8 @@ html[data-theme="dark"] .lp{--bg:#0e0e0e;--surface:#181818;--surface-2:#232323;-
 .lp .next-card{padding:0 20px!important;min-height:120px!important}
 .lp .next-card strong{font-size:20px!important}
 .lp .foot-link{min-height:44px}
-.lp .case-card > div:first-child{height:260px!important;padding:32px 20px 0!important}
-.lp .case-card > div:nth-child(2){padding:20px!important}
+.lp .case-card > div:first-child{padding:24px 20px 0!important}
+.lp .case-card > div:nth-child(2){height:260px!important;padding:24px 20px 0!important}
 .lp [style*="margin-bottom: 56px"]{margin-bottom:32px!important}
 .lp [style*="padding: 0 40px; min-height: 152px"]{gap:16px!important}
 }
@@ -101,7 +103,7 @@ html[data-theme="dark"] .lp{--bg:#0e0e0e;--surface:#181818;--surface-2:#232323;-
 .brand img{width:36px;height:36px;border-radius:18px;object-fit:cover;display:block;flex:none;box-shadow:0 0 0 2px var(--bg),0 0 0 3px var(--border)}
 @media (max-width: 760px){.brand{gap:8px}.brand img{width:32px;height:32px;border-radius:16px}.site-header > div > a.brand{font-size:15px!important}.site-header nav > a:last-child{padding:0 14px!important}}
 @media (max-width: 1100px){.hero-name-wide{font-size:96px!important}}
-@media (max-width: 760px){.hero-name-wide{font-size:52px!important;line-height:1!important}.hero-line{font-size:19px!important}.case-title > span:first-child{font-size:28px!important}.case-title > span:last-child{font-size:18px!important}}
+@media (max-width: 760px){.hero-name-wide{font-size:52px!important;line-height:1!important}.hero-line{font-size:19px!important}.case-title{font-size:24px!important}}
 
 </style>
 <script src="/assets/js/site.js" defer></script>
@@ -161,99 +163,43 @@ html[data-theme="dark"] .lp{--bg:#0e0e0e;--surface:#181818;--surface-2:#232323;-
 
 <div class="g2">
 
-<a href="/cases/oficina-concursos/" class="case-card" style="text-decoration: none; color: var(--ink); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--border)">
-<div style="height: 380px; background: var(--case-blue); position: relative; overflow: hidden; display: flex; justify-content: center; align-items: flex-end; padding: 56px 40px 0; box-sizing: border-box">
-<span style="position: absolute; top: 20px; left: 20px; z-index: 1; background: var(--bg); color: var(--ink); border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 600">Site no ar · 8 meses</span>
+<a href="/cases/oficina-concursos/" class="case-card" style="text-decoration: none; color: var(--ink); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; background: var(--case-blue)">
+<div style="padding: 32px 32px 0; display: flex; flex-direction: column; gap: 14px">
+<span class="case-eyebrow" style="display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; line-height: 18px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase"><span>Oficina Concursos</span><span style="color: var(--ink-muted)">Site</span><span style="color: var(--ink-muted)">Site no ar</span></span>
+<h3 class="case-title" style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 700; letter-spacing: -0.01em; max-width: 520px">Disciplinas, professores e edital organizados para facilitar a escolha do curso <span class="next-arrow" aria-hidden="true">→</span></h3>
+</div>
+<div style="height: 380px; position: relative; overflow: hidden; display: flex; justify-content: center; align-items: flex-end; padding: 32px 40px 0; box-sizing: border-box; margin-top: auto">
 <img width="1440" height="890" fetchpriority="high" decoding="async" class="case-mock" src="/assets/img/of2_hero.webp" alt="Home do novo site da Oficina Concursos" style="width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 14px 14px 0 0; box-shadow: 0 12px 32px rgba(0,0,0,0.18); display: block">
 </div>
-<div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1">
-<h3 class="case-title" style="margin: 0; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 34px; line-height: 1.1; font-weight: 700; letter-spacing: -0.02em">Oficina Concursos</span><span style="font-size: 20px; line-height: 1.35; font-weight: 600">Redesign do site oficial</span></h3>
-<p style="margin: 0; font-size: 15px; line-height: 24px; color: var(--ink-muted)">Para o candidato encontrar o seu concurso e decidir a matrícula no próprio site.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-
-<span style="border: 1px solid var(--border-strong); border-radius: 999px; padding: 5px 12px; font-size: 13px; line-height: 18px">Arquitetura de informação</span>
-
-<span style="border: 1px solid var(--border-strong); border-radius: 999px; padding: 5px 12px; font-size: 13px; line-height: 18px">Catálogo</span>
-
-<span style="border: 1px solid var(--border-strong); border-radius: 999px; padding: 5px 12px; font-size: 13px; line-height: 18px">Página de curso</span>
-
-</div>
-<div style="margin-top: auto; display: flex; gap: 12px; align-items: flex-end; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 16px">
-<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-subtle)">Destaque</span><strong style="font-size: 16px">Redesign completo, já no ar</strong></span>
-<span style="font-size: 15px; font-weight: 600; white-space: nowrap">Ler case <span aria-hidden="true">→</span></span>
-</div>
-</div>
 </a>
 
-<a href="/cases/easymath/" class="case-card" style="text-decoration: none; color: var(--ink); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--border)">
-<div style="height: 380px; background: var(--case-orange); position: relative; overflow: hidden; display: flex; justify-content: center; align-items: flex-end; padding: 56px 40px 0; box-sizing: border-box">
-<span style="position: absolute; top: 20px; left: 20px; z-index: 1; background: var(--bg); color: var(--ink); border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 600">Em desenvolvimento · 1 ano</span>
+<a href="/cases/easymath/" class="case-card" style="text-decoration: none; color: var(--ink); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; background: var(--case-orange)">
+<div style="padding: 32px 32px 0; display: flex; flex-direction: column; gap: 14px">
+<span class="case-eyebrow" style="display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; line-height: 18px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase"><span>EasyMath</span><span style="color: var(--ink-muted)">App</span><span style="color: var(--ink-muted)">Em desenvolvimento</span></span>
+<h3 class="case-title" style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 700; letter-spacing: -0.01em; max-width: 520px">Matemática mais dinâmica, com cada conquista à vista <span class="next-arrow" aria-hidden="true">→</span></h3>
+</div>
+<div style="height: 380px; position: relative; overflow: hidden; display: flex; justify-content: center; align-items: flex-end; padding: 32px 40px 0; box-sizing: border-box; margin-top: auto">
 <img width="1200" height="760" loading="lazy" decoding="async" class="case-mock" src="/assets/img/em_optB.webp" alt="Trilha de estudos e unidade dominada no EasyMath" style="width: 100%; height: 100%; object-fit: contain; object-position: bottom; display: block">
 </div>
-<div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1">
-<h3 class="case-title" style="margin: 0; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 34px; line-height: 1.1; font-weight: 700; letter-spacing: -0.02em">EasyMath</span><span style="font-size: 20px; line-height: 1.35; font-weight: 600">Redesign da trilha de estudos</span></h3>
-<p style="margin: 0; font-size: 15px; line-height: 24px; color: var(--ink-muted)">Para o aluno saber sempre qual é o próximo passo no app.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-
-<span style="border: 1px solid var(--border-strong); border-radius: 999px; padding: 5px 12px; font-size: 13px; line-height: 18px">Navegação</span>
-
-<span style="border: 1px solid var(--border-strong); border-radius: 999px; padding: 5px 12px; font-size: 13px; line-height: 18px">Gamificação</span>
-
-<span style="border: 1px solid var(--border-strong); border-radius: 999px; padding: 5px 12px; font-size: 13px; line-height: 18px">Mobile</span>
-
-</div>
-<div style="margin-top: auto; display: flex; gap: 12px; align-items: flex-end; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 16px">
-<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-subtle)">Destaque</span><strong style="font-size: 16px">Trilha sem pressão de sequência</strong></span>
-<span style="font-size: 15px; font-weight: 600; white-space: nowrap">Ler case <span aria-hidden="true">→</span></span>
-</div>
-</div>
 </a>
 
-<a href="/cases/facilita-cnh/" class="case-card" style="text-decoration: none; color: var(--ink); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--border)">
-<div style="height: 380px; background: var(--case-green); position: relative; overflow: hidden; display: flex; justify-content: center; align-items: flex-end; padding: 56px 40px 0; box-sizing: border-box">
-<span style="position: absolute; top: 20px; left: 20px; z-index: 1; background: var(--bg); color: var(--ink); border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 600">Em teste · 8 meses</span>
+<a href="/cases/facilita-cnh/" class="case-card" style="text-decoration: none; color: var(--ink); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; background: var(--case-green)">
+<div style="padding: 32px 32px 0; display: flex; flex-direction: column; gap: 14px">
+<span class="case-eyebrow" style="display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; line-height: 18px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase"><span>Facilita CNH</span><span style="color: var(--ink-muted)">App</span><span style="color: var(--ink-muted)">Em teste</span></span>
+<h3 class="case-title" style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 700; letter-spacing: -0.01em; max-width: 520px">Instrutor, horário e pagamento da aula prática no mesmo app <span class="next-arrow" aria-hidden="true">→</span></h3>
+</div>
+<div style="height: 380px; position: relative; overflow: hidden; display: flex; justify-content: center; align-items: flex-end; padding: 32px 40px 0; box-sizing: border-box; margin-top: auto">
 <img width="1200" height="760" loading="lazy" decoding="async" class="case-mock" src="/assets/img/fa_capa.webp" alt="Mapa de instrutores, perfil do instrutor e parcelamento no Facilita CNH" style="width: 100%; height: 100%; object-fit: contain; object-position: bottom; display: block">
 </div>
-<div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1">
-<h3 class="case-title" style="margin: 0; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 34px; line-height: 1.1; font-weight: 700; letter-spacing: -0.02em">Facilita CNH</span><span style="font-size: 20px; line-height: 1.35; font-weight: 600">Agendamento de aulas práticas</span></h3>
-<p style="margin: 0; font-size: 15px; line-height: 24px; color: var(--ink-muted)">Busca, agendamento e pagamento de aulas com instrutores e autoescolas, no app.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-
-<span style="border: 1px solid var(--border-strong); border-radius: 999px; padding: 5px 12px; font-size: 13px; line-height: 18px">Marketplace</span>
-
-<span style="border: 1px solid var(--border-strong); border-radius: 999px; padding: 5px 12px; font-size: 13px; line-height: 18px">Agendamento</span>
-
-<span style="border: 1px solid var(--border-strong); border-radius: 999px; padding: 5px 12px; font-size: 13px; line-height: 18px">Pagamento</span>
-
-</div>
-<div style="margin-top: auto; display: flex; gap: 12px; align-items: flex-end; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 16px">
-<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-subtle)">Destaque</span><strong style="font-size: 16px">App com nota 4,8 ★ e 5 mil+ downloads</strong></span>
-<span style="font-size: 15px; font-weight: 600; white-space: nowrap">Ler case <span aria-hidden="true">→</span></span>
-</div>
-</div>
 </a>
 
-<a href="/cases/lm-checkout/" class="case-card" style="text-decoration: none; color: var(--ink); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--border)">
-<div style="height: 380px; background: var(--case-lilac); position: relative; overflow: hidden; display: flex; justify-content: center; align-items: flex-end; padding: 56px 40px 0; box-sizing: border-box">
-<span style="position: absolute; top: 20px; left: 20px; z-index: 1; background: var(--bg); color: var(--ink); border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 600">Fluxo completo · 2 meses e 20 dias</span>
+<a href="/cases/lm-checkout/" class="case-card" style="text-decoration: none; color: var(--ink); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; background: var(--case-lilac)">
+<div style="padding: 32px 32px 0; display: flex; flex-direction: column; gap: 14px">
+<span class="case-eyebrow" style="display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; line-height: 18px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase"><span>LM Cursos de Trânsito</span><span style="color: var(--ink-muted)">Checkout</span><span style="color: var(--ink-muted)">Fluxo completo</span></span>
+<h3 class="case-title" style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 700; letter-spacing: -0.01em; max-width: 520px">Um checkout sem atrito, que facilita levar mais cursos <span class="next-arrow" aria-hidden="true">→</span></h3>
+</div>
+<div style="height: 380px; position: relative; overflow: hidden; display: flex; justify-content: center; align-items: flex-end; padding: 32px 40px 0; box-sizing: border-box; margin-top: auto">
 <img width="1048" height="1304" loading="lazy" decoding="async" class="case-mock" src="/assets/img/lm_carrinho.webp" alt="Carrinho com desconto progressivo da LM" style="width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 14px 14px 0 0; box-shadow: 0 12px 32px rgba(0,0,0,0.18); display: block">
-</div>
-<div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1">
-<h3 class="case-title" style="margin: 0; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 34px; line-height: 1.1; font-weight: 700; letter-spacing: -0.02em">LM Cursos de Trânsito</span><span style="font-size: 20px; line-height: 1.35; font-weight: 600">Novo carrinho e checkout</span></h3>
-<p style="margin: 0; font-size: 15px; line-height: 24px; color: var(--ink-muted)">Desconto progressivo e cashback para vender mais cursos por pedido.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-
-<span style="border: 1px solid var(--border-strong); border-radius: 999px; padding: 5px 12px; font-size: 13px; line-height: 18px">Checkout</span>
-
-<span style="border: 1px solid var(--border-strong); border-radius: 999px; padding: 5px 12px; font-size: 13px; line-height: 18px">CRO</span>
-
-<span style="border: 1px solid var(--border-strong); border-radius: 999px; padding: 5px 12px; font-size: 13px; line-height: 18px">Login social</span>
-
-</div>
-<div style="margin-top: auto; display: flex; gap: 12px; align-items: flex-end; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 16px">
-<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-subtle)">Destaque</span><strong style="font-size: 16px">Desconto progressivo + cashback</strong></span>
-<span style="font-size: 15px; font-weight: 600; white-space: nowrap">Ler case <span aria-hidden="true">→</span></span>
-</div>
 </div>
 </a>
 
