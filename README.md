@@ -11,7 +11,7 @@ Site estático (HTML, CSS e JavaScript, sem framework) publicado na Vercel.
 - `assets/larissa-petrungaro-curriculo.pdf` — currículo
 
 ## Formulário
-Troque `SEU_CODIGO_AQUI` em `index.html` pelo código do formulário do Formspree (formspree.io → New form → `https://formspree.io/f/xxxxxx`).
+O formulário da Home envia para o Formspree (`https://formspree.io/f/xnpdqjnb`). Para trocar, altere o `action` do `<form>` em `index.html`.
 
 ## Publicar
 1. Suba esta pasta para um repositório no GitHub.
