@@ -1,6 +1,18 @@
 {
   "cleanUrls": true,
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/axl-seguros",
+      "destination": "/projetos/axl-seguros/",
+      "permanent": true
+    },
+    {
+      "source": "/clubee",
+      "destination": "/projetos/clubee/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
