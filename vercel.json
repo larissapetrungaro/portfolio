@@ -11,6 +11,16 @@
       "source": "/clubee",
       "destination": "/projetos/clubee/",
       "permanent": true
+    },
+    {
+      "source": "/axl-seguros/",
+      "destination": "/projetos/axl-seguros/",
+      "permanent": true
+    },
+    {
+      "source": "/clubee/",
+      "destination": "/projetos/clubee/",
+      "permanent": true
     }
   ],
   "headers": [
