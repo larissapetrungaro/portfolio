@@ -1,5 +1,17 @@
 (function () {
   var root = document.documentElement;
+  var EN = (root.getAttribute('lang') || '').indexOf('en') === 0;
+  var L = EN ? {
+    claro: 'Switch to light theme', escuro: 'Switch to dark theme', menu: 'Menu', fechar: 'Close',
+    inativo: 'The form is not active yet. Write to larissapetrungaro@gmail.com.', enviando: 'Sending…',
+    ok: 'Message sent. Thank you! I’ll reply to the email you provided.',
+    erro: 'I couldn’t send it right now. Try again or write to larissapetrungaro@gmail.com.', enviar: 'Send message'
+  } : {
+    claro: 'Mudar para tema claro', escuro: 'Mudar para tema escuro', menu: 'Menu', fechar: 'Fechar',
+    inativo: 'O formulário ainda não está ativo. Escreva para larissapetrungaro@gmail.com.', enviando: 'Enviando…',
+    ok: 'Mensagem enviada. Obrigada! Respondo pelo e-mail que você informou.',
+    erro: 'Não consegui enviar agora. Tente de novo ou escreva para larissapetrungaro@gmail.com.', enviar: 'Enviar mensagem'
+  };
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Tema claro/escuro, salvo no navegador
@@ -9,11 +21,11 @@
     try { localStorage.setItem('tema', t); } catch (e) {}
     document.querySelectorAll('.theme-btn').forEach(function (b) {
       b.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
-      b.title = t === 'dark' ? 'Mudar para tema claro' : 'Mudar para tema escuro';
+      b.title = t === 'dark' ? L.claro : L.escuro;
     });
     document.querySelectorAll('.menu-theme').forEach(function (b) {
       b.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
-      b.textContent = t === 'dark' ? 'Mudar para tema claro' : 'Mudar para tema escuro';
+      b.textContent = t === 'dark' ? L.claro : L.escuro;
     });
   }
   aplicaTema(tema());
@@ -26,14 +38,14 @@
   var painel = document.getElementById('menu-mobile');
   function fechaMenu() {
     if (!painel || painel.hidden) return;
-    painel.hidden = true; menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.textContent = 'Menu';
+    painel.hidden = true; menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.textContent = L.menu;
   }
   if (menuBtn && painel) {
     menuBtn.addEventListener('click', function () {
       var abrir = painel.hidden;
       painel.hidden = !abrir;
       menuBtn.setAttribute('aria-expanded', abrir ? 'true' : 'false');
-      menuBtn.textContent = abrir ? 'Fechar' : 'Menu';
+      menuBtn.textContent = abrir ? L.fechar : L.menu;
     });
     painel.addEventListener('click', function (e) { if (e.target.closest('a')) fechaMenu(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { fechaMenu(); menuBtn.focus(); } });
@@ -76,22 +88,22 @@
       e.preventDefault();
       if (form.action.indexOf('SEU_CODIGO') !== -1) {
         status.hidden = false; status.className = 'form-status erro';
-        status.textContent = 'O formulário ainda não está ativo. Escreva para larissapetrungaro@gmail.com.';
+        status.textContent = L.inativo;
         return;
       }
-      botao.disabled = true; botao.textContent = 'Enviando…';
+      botao.disabled = true; botao.textContent = L.enviando;
       fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
         .then(function (r) {
           if (!r.ok) throw new Error();
           form.reset();
           status.hidden = false; status.className = 'form-status ok';
-          status.textContent = 'Mensagem enviada. Obrigada! Respondo pelo e-mail que você informou.';
+          status.textContent = L.ok;
         })
         .catch(function () {
           status.hidden = false; status.className = 'form-status erro';
-          status.textContent = 'Não consegui enviar agora. Tente de novo ou escreva para larissapetrungaro@gmail.com.';
+          status.textContent = L.erro;
         })
-        .then(function () { botao.disabled = false; botao.textContent = 'Enviar mensagem'; });
+        .then(function () { botao.disabled = false; botao.textContent = L.enviar; });
     });
   }
 })();
