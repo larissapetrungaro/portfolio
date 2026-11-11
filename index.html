@@ -48,7 +48,7 @@ html[data-theme="dark"] .lp{--bg:#0e0e0e;--surface:#181818;--surface-2:#232323;-
 .site-header.is-scrolled{box-shadow:0 4px 20px rgba(0,0,0,0.08)}
 .case-card{transition:transform .3s ease,box-shadow .3s ease}
 .case-card:hover,.case-card:focus-visible{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
-.case-mock{transition:transform .4s ease}
+.case-mock{transition:transform .4s ease;transform-origin:center top}
 .next-arrow{display:inline-block;transition:transform .2s ease}
 .case-card:hover .next-arrow{transform:translateX(4px)}
 .case-card:hover .case-mock,.case-card:focus-visible .case-mock{transform:scale(1.04)}
@@ -211,7 +211,7 @@ html[data-theme="dark"] .lp{--bg:#0e0e0e;--surface:#181818;--surface-2:#232323;-
 
 <a href="/cases/facilita-cnh/" class="case-card" style="text-decoration: none; color: var(--ink); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--border)">
 <div style="height: 380px; background: var(--case-green); position: relative; overflow: hidden; display: flex; justify-content: center; align-items: flex-start; padding: 28px 0 0; box-sizing: border-box">
-<img width="1200" height="760" loading="lazy" decoding="async" class="case-mock" src="/assets/img/fa_capa.webp" alt="Mapa de instrutores, perfil do instrutor e parcelamento no Facilita CNH" style="height: 130%; width: auto; max-width: none; flex: none; display: block">
+<img width="1200" height="760" loading="lazy" decoding="async" class="case-mock" src="/assets/img/fa_capa.webp" alt="Mapa de instrutores, perfil do instrutor e parcelamento no Facilita CNH" style="width: calc(100% - 24px); height: auto; max-width: none; flex: none; display: block">
 </div>
 <div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex: 1">
 <span class="case-eyebrow" style="font-size: 14px; line-height: 20px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase">Facilita CNH</span>
