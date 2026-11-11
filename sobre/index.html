@@ -107,6 +107,9 @@ h2[id]{scroll-margin-top:112px}
 .theme-btn:hover{border-color:var(--border-strong)}
 .menu-theme{display:flex;align-items:center;width:100%;min-height:48px;padding:0 20px;border:0;border-top:1px solid var(--border);background:transparent;color:var(--ink);font:inherit;font-size:17px;text-align:left;cursor:pointer}
 @media (max-width: 760px){.theme-btn{display:none!important}}
+.brand{display:inline-flex;align-items:center;gap:12px;white-space:nowrap}
+.brand img{width:36px;height:36px;border-radius:18px;object-fit:cover;display:block;flex:none;box-shadow:0 0 0 2px var(--bg),0 0 0 3px var(--border)}
+@media (max-width: 760px){.brand{gap:8px}.brand img{width:32px;height:32px;border-radius:16px}.site-header > div > a.brand{font-size:15px!important}.site-header nav > a:last-child{padding:0 14px!important}}
 
 </style>
 <script src="/assets/js/site.js" defer></script>
@@ -117,7 +120,7 @@ h2[id]{scroll-margin-top:112px}
 <div class="lp" id="top" style="font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; color: var(--ink); background: var(--bg); width: 100%; -webkit-font-smoothing: antialiased">
 <header class="site-header" style="position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--border); background: var(--bg)">
 <div style="max-width: 1200px; margin: 0 auto; padding: 20px 32px; display: flex; gap: 16px; align-items: center; justify-content: space-between">
-<a href="/" style="color: var(--ink); font-weight: 700; font-size: 18px; text-decoration: none">Larissa Petrungaro</a>
+<a href="/" class="brand" style="color: var(--ink); font-weight: 700; font-size: 18px; text-decoration: none"><img loading="lazy" decoding="async" src="/assets/img/larissa_avatar.webp" alt="" width="36" height="36">Larissa Petrungaro</a>
 <nav aria-label="Principal" style="display: flex; gap: 28px; align-items: center; font-size: 15px">
 <span class="nav-links" style="display: flex; gap: 28px; align-items: center">
 <a href="/#cases" style="color: var(--ink); text-decoration: none">Cases</a>
