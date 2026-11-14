@@ -3,14 +3,14 @@
   var EN = (root.getAttribute('lang') || '').indexOf('en') === 0;
   var L = EN ? {
     claro: 'Switch to light theme', escuro: 'Switch to dark theme', menu: 'Menu', fechar: 'Close',
-    inativo: 'The form is not active yet. Write to larissapetrungaro@gmail.com.', enviando: 'Sending…',
+    inativo: 'The form is not active yet. Reach me on LinkedIn or WhatsApp.', enviando: 'Sending…',
     ok: 'Message sent. Thank you! I’ll reply to the email you provided.',
-    erro: 'I couldn’t send it right now. Try again or write to larissapetrungaro@gmail.com.', enviar: 'Send message'
+    erro: 'I couldn’t send it right now. Try again or reach me on LinkedIn or WhatsApp.', enviar: 'Send message'
   } : {
     claro: 'Mudar para tema claro', escuro: 'Mudar para tema escuro', menu: 'Menu', fechar: 'Fechar',
-    inativo: 'O formulário ainda não está ativo. Escreva para larissapetrungaro@gmail.com.', enviando: 'Enviando…',
+    inativo: 'O formulário ainda não está ativo. Fale comigo pelo LinkedIn ou WhatsApp.', enviando: 'Enviando…',
     ok: 'Mensagem enviada. Obrigada! Respondo pelo e-mail que você informou.',
-    erro: 'Não consegui enviar agora. Tente de novo ou escreva para larissapetrungaro@gmail.com.', enviar: 'Enviar mensagem'
+    erro: 'Não consegui enviar agora. Tente de novo ou fale comigo pelo LinkedIn ou WhatsApp.', enviar: 'Enviar mensagem'
   };
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
